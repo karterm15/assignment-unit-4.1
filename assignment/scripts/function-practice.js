@@ -61,29 +61,42 @@ console.log('is the number -4 positive?', isPositive(-4))
 //    array is empty, return `undefined`.
 
 function getLast(array) {
- 
+ if(array.length === 0){
+  return undefined;
+ }
+ return array[array.length -1]
 }
+
+console.log('checking last item in an array', getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
+let arrays=[2,4,6,8]
+
+function find(value, arrays) {
+for(let i=0; i < arrays.length; i++){
+  if(arrays[i] === value){
+    return true;
+    
+  }
+}
+return false
 
 }
+console.log('is there values in the array?', arrays);
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
-}
+function isFirstLetter(letter, string) {
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll(array) {
-  let sum = 0;
+
   // TODO: loop to add items
 
   // TODO: return the sum
@@ -92,6 +105,7 @@ function sumAll(array) {
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
 function allPositive() {
 
 }
